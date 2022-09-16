@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>💫 Discord Custom Status 💦</title>
+    
+    <script defer src="render.js" type="module"></script>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--Extra css-->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="body_lightMode" id="body">
+    <div id="titleHolder">
+      <h1 class="appTitle text-dark" id="mainAppTitle">💫 Discord Custom Status 💦</h1>
+
+      <label class="switch">
+        <input type="checkbox" id="switchMode">
+        <span class="slider"></span>
+    </label>
+    </div>
+
+    <div id="richPresenceHolder">
+      <main class="form-signin w-100 m-auto">
+        <form>
+          <h1 class="h3 mb-3 fw-normal" id="valuesText">Values</h1>
+      
+          <div class="form-floating">
+            <input type="text" class="form-control" id="clientId" placeholder="1234567890123456789">
+            <label for="floatingInput">ClientId</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" id="state" placeholder="Playing">
+            <label for="floatingPassword">State</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" id="details" placeholder="Pink cooked spider">
+            <label for="floatingPassword">Details</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" id="largeImageKey" placeholder="Argentina City">
+            <label for="floatingPassword">Large Image Key</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" id="largeImageText" placeholder="Image of Argentina City">
+            <label for="floatingPassword">Large Image Text</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" id="smallImageKey" placeholder="Image of Argentina City">
+            <label for="floatingPassword">Small Image Key</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" id="smallImageText" placeholder="Image of Argentina City">
+            <label for="floatingPassword">Small Image Text</label>
+          </div>
+      
+          <div class="checkbox mb-3">
+            <label style="display: flex;">
+              <input type="checkbox" value="remember-me" id="rememberMe"> <label style="padding-left: 0.25em;" class="text-dark" id="rememberMeText">Remember values</label>
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="button" id="setState">Set State</button>
+          <p class="mt-5 mb-3 text-muted" style="text-align: center;">2021–2022 / Rotwo</p>
+        </form>
+      </main>
+    </div>
+
+    <!--Done Modal-->
+    <div class="modal fade" id="doneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">💫 Discord Custom Status 💦</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">🍃 Status Setted! 🍭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--NAVBAR BOTTOM-->
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+      <!-- Navbar content -->
+      <div class="container-fluid">
+          <a class="navbar-brand" href="https://github.com/rotwo">Github</a>
+          <a class="navbar-brand" href="mailto://Support.Rotwo@proton.me">Contact Me</a>
+      </div>
+    </nav>
+
+
+
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

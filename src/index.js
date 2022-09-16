@@ -100,7 +100,7 @@ const createUpdateWindow = () => {
 
     ipcMain.on('update-event', (event, arg) => {
       event.returnValue = 'Message received!'
-      require('electron').shell.openExternal('');
+      require('electron').shell.openExternal(arg);
     })
   };
 

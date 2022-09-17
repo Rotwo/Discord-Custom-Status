@@ -1,0 +1,19 @@
+directories:
+  output: dist
+  buildResources: build
+appId: discord-custom-status
+win:
+  target:
+    - nsis
+  icon: src/favicon.ico
+nsis:
+  installerIcon: src/favicon.ico
+  uninstallerIcon: src/favicon.ico
+  uninstallDisplayName: 💫 Discord Custom Status 💦
+  oneClick: true
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  allowElevation: true
+files: []
+electronVersion: 20.1.3

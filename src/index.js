@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
+const { argv } = require('process');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 // eslint-disable-next-line global-require
@@ -21,6 +22,10 @@ const createWindow = () => {
     },
   });
 
+  console.log(argv);
+
+  mainWindow.setMenu(null);
+
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
@@ -35,7 +40,7 @@ const createWindow = () => {
 
   /////////////////////////////////////////////////////
   /// IF THERE IS ANY UPDATE THIS VALUE MUST BE CHANGED
-  var currentVersion = "0.1.0";
+  var currentVersion = "1.0.0";
   /// IF THERE IS ANY UPDATE THIS VALUE MUST BE CHANGED
   /////////////////////////////////////////////////////
 
@@ -87,6 +92,8 @@ const createUpdateWindow = () => {
         preload: path.join(__dirname, 'update_preload.js'),
       },
     });
+
+    UpdateWindow.setMenu(null);
   
     // and load the index.html of the app.
     UpdateWindow.loadFile(path.join(__dirname, 'update.html'));

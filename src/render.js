@@ -56,6 +56,8 @@ function setActivity(){
         clearInterval(interval); // stop the interval
     }catch{}
 
+    var timeStamp = Date.now();
+
     var clientId = document.getElementById('clientId').value;
     var valueState = document.getElementById('state').value;
 
@@ -73,25 +75,9 @@ function setActivity(){
     var largeImageKey = document.getElementById('largeImageKey').value;
     var largeImageText = document.getElementById('largeImageText').value;
 
-    if(largeImageKey === ""){
-        largeImageKey = null;
-    }
-
-    if(largeImageText === ""){
-        largeImageText = null;
-    }
-
     // Small image
     var smallImageKey = document.getElementById('smallImageKey').value;
     var smallImageText = document.getElementById('smallImageText').value;
-
-    if(smallImageKey === ""){
-        smallImageKey = null;
-    }
-
-    if(smallImageText === ""){
-        smallImageText = null;
-    }
 
     DiscordRPC.register(clientId);
 
@@ -100,23 +86,44 @@ function setActivity(){
     RPC.login({ clientId }).catch(error => {
         console.error(error);
         alert(error);
+        return;
     });
 
     setTimeout(() => {
 
-        mainDiscordLoop(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText);
+        mainDiscordLoop(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText, timeStamp);
         alert('🍭 Done! 🍃', "");
 
     }, 3000);
 }
 
-async function rpcSetActivity(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText){
+async function rpcSetActivity(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText, timeStamp){
     if(!RPC) return;
+
+    // Check if there is any value that is empty();
+
+    if(largeImageKey === ""){
+        largeImageKey = "null";
+    }
+
+    if(largeImageText === ""){
+        largeImageText = "💫 Discord Custom Status 💦";
+    }
+
+    ///////////////////////
+
+    if(smallImageKey === ""){
+        smallImageKey = "null";
+    }
+
+    if(smallImageText === ""){
+        smallImageText = "💫 Discord Custom Status 💦";
+    }
 
     RPC.setActivity({
         state: valueState,
         details: valueDetails,
-        startTimestamp: Date.now(),
+        startTimestamp: timeStamp,
         // Large image
         largeImageKey: largeImageKey,
         largeImageText: largeImageText,
@@ -126,11 +133,11 @@ async function rpcSetActivity(valueState, valueDetails, largeImageKey, largeImag
     });
 }
 
-function mainDiscordLoop(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText){
+function mainDiscordLoop(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText, timeStamp){
 
-    rpcSetActivity(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText);
+    rpcSetActivity(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText, timeStamp);
 
     interval = setInterval(() => {
-        rpcSetActivity(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText);
+        rpcSetActivity(valueState, valueDetails, largeImageKey, largeImageText, smallImageKey, smallImageText, timeStamp);
     }, 15 * 1000);
 }

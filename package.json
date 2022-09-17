@@ -1,15 +1,33 @@
 {
-  "name": "discordcustomstatus",
-  "productName": "discordcustomstatus",
+  "name": "discord-custom-status",
+  "productName": "💫 Discord Custom Status 💦",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "🍃 Change your discord status easily! 🔥",
   "main": "src/index.js",
+  "build": {
+    "appId": "discord-custom-status",
+    "win": {
+      "target": ["nsis"],
+      "icon": "src/favicon.ico"
+    },
+    "nsis":{
+      "installerIcon": "src/favicon.ico",
+      "uninstallerIcon": "src/favicon.ico",
+      "uninstallDisplayName": "💫 Discord Custom Status 💦",
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "allowElevation": true
+    }
+  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": {
@@ -56,6 +74,8 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.66",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.66",
     "@electron-forge/maker-zip": "^6.0.0-beta.66",
-    "electron": "20.1.3"
+    "electron": "20.1.3",
+    "electron-builder": "^23.3.3",
+    "electron-builder-squirrel-windows": "^23.5.1"
   }
 }

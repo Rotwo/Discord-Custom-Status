@@ -1,8 +1,8 @@
-version: 1.0.0
+version: 1.0.1
 files:
-  - url: discord-custom-status-setup-1.0.0.exe
-    sha512: YqLet+2YM3Qedvhw/hKoRSYB6udoSSvs6vP6ulZH4+x+Rn5vGQjGXzZagefUK8K+ZyrflOk3/yqGhDI5cD//Hw==
-    size: 69013239
-path: discord-custom-status-setup-1.0.0.exe
-sha512: YqLet+2YM3Qedvhw/hKoRSYB6udoSSvs6vP6ulZH4+x+Rn5vGQjGXzZagefUK8K+ZyrflOk3/yqGhDI5cD//Hw==
-releaseDate: '2022-09-17T16:58:38.970Z'
+  - url: discord-custom-status-setup-1.0.1.exe
+    sha512: rx41qXW8Ftp7wbH6YxwVjk0F9JKVhv6Vcs3YgQRERksOrDmE+VKlbSdW36tcRLYMzPeQA4K3L3k1Bn7ERPe5zg==
+    size: 69012614
+path: discord-custom-status-setup-1.0.1.exe
+sha512: rx41qXW8Ftp7wbH6YxwVjk0F9JKVhv6Vcs3YgQRERksOrDmE+VKlbSdW36tcRLYMzPeQA4K3L3k1Bn7ERPe5zg==
+releaseDate: '2022-09-18T13:47:42.451Z'

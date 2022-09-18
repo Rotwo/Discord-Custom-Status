@@ -40,7 +40,7 @@ const createWindow = () => {
 
   /////////////////////////////////////////////////////
   /// IF THERE IS ANY UPDATE THIS VALUE MUST BE CHANGED
-  var currentVersion = "1.0.0";
+  var currentVersion = "1.0.1";
   /// IF THERE IS ANY UPDATE THIS VALUE MUST BE CHANGED
   /////////////////////////////////////////////////////
 

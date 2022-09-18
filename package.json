@@ -1,7 +1,7 @@
 {
   "name": "discord-custom-status",
   "productName": "💫 Discord Custom Status 💦",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🍃 Change your discord status easily! 🔥",
   "main": "src/index.js",
   "build": {

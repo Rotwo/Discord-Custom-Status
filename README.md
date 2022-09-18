@@ -2,7 +2,7 @@
 
 ## Description 
 
-Change your discord state easily.
+* Change your discord state <b>easily</b>!
 
 
 ## Contents

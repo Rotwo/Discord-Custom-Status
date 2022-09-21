@@ -8,7 +8,8 @@
     "appId": "discord-custom-status",
     "win": {
       "target": ["nsis"],
-      "icon": "src/favicon.ico"
+      "icon": "src/favicon.ico",
+      "publisherName": "Rotwo"
     },
     "nsis":{
       "installerIcon": "src/favicon.ico",
